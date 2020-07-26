@@ -32,7 +32,7 @@ namespace MyRest.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 56),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                Summary = Summaries[rng.Next(Summaries.Length)] + " Machine: " + System.Environment.MachineName
             })
             .ToArray();
         }
